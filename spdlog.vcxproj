@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{09405302-767E-427F-8D43-DFC0F29ECADB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bench\boost-bench-mt.cpp" />
+    <ClCompile Include="bench\boost-bench.cpp" />
+    <ClCompile Include="bench\easylogging-bench-async.cpp" />
+    <ClCompile Include="bench\easylogging-bench-mt.cpp" />
+    <ClCompile Include="bench\easylogging-bench.cpp" />
+    <ClCompile Include="bench\g2log-async.cpp" />
+    <ClCompile Include="bench\g3log-async.cpp" />
+    <ClCompile Include="bench\glog-bench-mt.cpp" />
+    <ClCompile Include="bench\glog-bench.cpp" />
+    <ClCompile Include="bench\latency\g3log-crush.cpp" />
+    <ClCompile Include="bench\latency\g3log-latency.cpp" />
+    <ClCompile Include="bench\latency\spdlog-latency.cpp" />
+    <ClCompile Include="bench\log4cplus-bench-mt.cpp" />
+    <ClCompile Include="bench\log4cplus-bench.cpp" />
+    <ClCompile Include="bench\log4cpp-bench-mt.cpp" />
+    <ClCompile Include="bench\log4cpp-bench.cpp" />
+    <ClCompile Include="bench\p7-bench-mt.cpp" />
+    <ClCompile Include="bench\p7-bench.cpp" />
+    <ClCompile Include="bench\plog-bench-mt.cpp" />
+    <ClCompile Include="bench\plog-bench.cpp" />
+    <ClCompile Include="bench\spdlog-async.cpp" />
+    <ClCompile Include="bench\spdlog-bench-mt.cpp" />
+    <ClCompile Include="bench\spdlog-bench.cpp" />
+    <ClCompile Include="bench\spdlog-null-async.cpp" />
+    <ClCompile Include="example\bench.cpp" />
+    <ClCompile Include="example\example.cpp" />
+    <ClCompile Include="example\jni\example.cpp" />
+    <ClCompile Include="example\multisink.cpp" />
+    <ClCompile Include="include\spdlog\fmt\bundled\format.cc" />
+    <ClCompile Include="include\spdlog\fmt\bundled\ostream.cc" />
+    <ClCompile Include="include\spdlog\fmt\bundled\posix.cc" />
+    <ClCompile Include="include\spdlog\fmt\bundled\printf.cc" />
+    <ClCompile Include="tests\errors.cpp" />
+    <ClCompile Include="tests\file_helper.cpp" />
+    <ClCompile Include="tests\file_log.cpp" />
+    <ClCompile Include="tests\main.cpp" />
+    <ClCompile Include="tests\registry.cpp" />
+    <ClCompile Include="tests\test_async.cpp" />
+    <ClCompile Include="tests\test_macros.cpp" />
+    <ClCompile Include="tests\test_misc.cpp" />
+    <ClCompile Include="tests\test_pattern_formatter.cpp" />
+    <ClCompile Include="tests\utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bench\latency\utils.h" />
+    <ClInclude Include="bench\utils.h" />
+    <ClInclude Include="example\utils.h" />
+    <ClInclude Include="include\spdlog\async_logger.h" />
+    <ClInclude Include="include\spdlog\common.h" />
+    <ClInclude Include="include\spdlog\contrib\sinks\step_file_sink.h" />
+    <ClInclude Include="include\spdlog\details\async_logger_impl.h" />
+    <ClInclude Include="include\spdlog\details\async_log_helper.h" />
+    <ClInclude Include="include\spdlog\details\file_helper.h" />
+    <ClInclude Include="include\spdlog\details\logger_impl.h" />
+    <ClInclude Include="include\spdlog\details\log_msg.h" />
+    <ClInclude Include="include\spdlog\details\mpmc_blocking_q.h" />
+    <ClInclude Include="include\spdlog\details\null_mutex.h" />
+    <ClInclude Include="include\spdlog\details\os.h" />
+    <ClInclude Include="include\spdlog\details\pattern_formatter_impl.h" />
+    <ClInclude Include="include\spdlog\details\registry.h" />
+    <ClInclude Include="include\spdlog\details\spdlog_impl.h" />
+    <ClInclude Include="include\spdlog\fmt\bundled\format.h" />
+    <ClInclude Include="include\spdlog\fmt\bundled\ostream.h" />
+    <ClInclude Include="include\spdlog\fmt\bundled\posix.h" />
+    <ClInclude Include="include\spdlog\fmt\bundled\printf.h" />
+    <ClInclude Include="include\spdlog\fmt\bundled\time.h" />
+    <ClInclude Include="include\spdlog\fmt\fmt.h" />
+    <ClInclude Include="include\spdlog\fmt\ostr.h" />
+    <ClInclude Include="include\spdlog\formatter.h" />
+    <ClInclude Include="include\spdlog\logger.h" />
+    <ClInclude Include="include\spdlog\sinks\android_sink.h" />
+    <ClInclude Include="include\spdlog\sinks\ansicolor_sink.h" />
+    <ClInclude Include="include\spdlog\sinks\base_sink.h" />
+    <ClInclude Include="include\spdlog\sinks\dist_sink.h" />
+    <ClInclude Include="include\spdlog\sinks\file_sinks.h" />
+    <ClInclude Include="include\spdlog\sinks\msvc_sink.h" />
+    <ClInclude Include="include\spdlog\sinks\null_sink.h" />
+    <ClInclude Include="include\spdlog\sinks\ostream_sink.h" />
+    <ClInclude Include="include\spdlog\sinks\sink.h" />
+    <ClInclude Include="include\spdlog\sinks\stdout_sinks.h" />
+    <ClInclude Include="include\spdlog\sinks\syslog_sink.h" />
+    <ClInclude Include="include\spdlog\sinks\wincolor_sink.h" />
+    <ClInclude Include="include\spdlog\sinks\windebug_sink.h" />
+    <ClInclude Include="include\spdlog\spdlog.h" />
+    <ClInclude Include="include\spdlog\tweakme.h" />
+    <ClInclude Include="tests\catch.hpp" />
+    <ClInclude Include="tests\includes.h" />
+    <ClInclude Include="tests\test_sink.h" />
+    <ClInclude Include="tests\utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
